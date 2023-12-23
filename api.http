@@ -1,0 +1,42 @@
+### Cadastrar novo usuário
+POST http://localhost:3333/api/v1/users
+content-type: application/json
+
+{
+    "name": "laura",
+    "email": "laura@email.com"
+}
+
+### Listar os usuários
+GET http://localhost:3333/api/v1/users
+
+
+### ** Movies ********
+
+### Cadastrar um novo filme
+POST http://localhost:3333/api/v1/movies
+content-type: application/json
+
+{
+    "title": "Coringa",
+    "duration": 120,
+    "release_date": "2000-09-12T14:08:50.614Z"
+}
+
+
+### Listar os filmes pela data de publicação
+GET http://localhost:3333/api/v1/movies/listByRelease
+
+### ** Aluguel de filmes ********
+
+### Cadastrar um aluguel de filme
+POST http://localhost:3333/api/v1/movies/rent
+content-type: application/json
+
+{
+    "userId": "49c20e0e-c831-4052-ad88-279f2e8bf6a8",
+    "movieId": "3a9dde3d-ebf4-4d26-8263-f8df2a69719a"
+}
+
+### 
+GET http://localhost:3333/api/v1/movies/rent/byUsers
